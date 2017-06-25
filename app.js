@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const socket = require('socket.io-client')(process.env.SOCKET_SERVER || 'http://localhost:3000');
+const server = require(path.join(__dirname + '/server/server.js'));
+const Util = require(path.join(__dirname + '/server/scripts/util.js')); 
 
 module.exports = app;
 
@@ -12,4 +15,12 @@ app.use('/api', require('./server/routes'));
 
 app.get('/', function(req, res, next){
 	res.send('200 success');
+});
+
+socket.on('do', function(){
+	Util.trending()
+		.then(function(data){
+			//do something here
+		})
+		.catch();
 });
