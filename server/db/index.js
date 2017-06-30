@@ -5,7 +5,7 @@
 */
 
 const Sequelize = require('Sequelize');
-const db = new Sequelize(process.env.DATABASE_URL);
+const db = new Sequelize(process.env.DATABASE_URL, { logging: false });
 
 var Gif = db.define('gif', {
 	label: {type: Sequelize.STRING},

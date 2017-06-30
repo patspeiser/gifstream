@@ -10,7 +10,7 @@ var config = {
 	host: "api.giphy.com",
 	path: "/v1/gifs/trending",
 	apiKey: '?api_key=babd11539d204551871cb29d4844e671', //process.env.GIPHY_KEY
-	limit: "&limit=25",
+	limit: "&limit=50",
 	rating: "rating=g"
 }
  
