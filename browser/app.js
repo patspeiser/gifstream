@@ -11,12 +11,12 @@ angular.module('gifstream')
 		$stateProvider
 			.state('home', {
 				url: '/',
-				template: "<div> Home template </div>",
+				templateUrl: './home/home.html',
 				controller: function(){}
 			})
 			.state('signin', {
 				url: '/signin',
-				template: "<div> signin / sign up template </div>",
+				templateUrl: './signin/signin.html',
 				controller: function(){}
 			})
 	})
