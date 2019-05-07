@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "start:dev": "cross-env SYNC=true cross-env DATABASE_URL=postgres://localhost/gifstream nodemon server/server.js"
+    "start:dev": "cross-env SYNC=true cross-env DATABASE_URL=<> nodemon server/server.js"
   },
   "author": "patspeiser",
   "license": "ISC",
